@@ -11,4 +11,7 @@ ARG PYSPARK_VERSION=3.2.0
 RUN pip --no-cache-dir install pyspark==${PYSPARK_VERSION}
 RUN pip install pytest
 
-ENTRYPOINT ["python"]
+ADD start.sh /
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
