@@ -1,9 +1,14 @@
-# Starting from base image
-FROM gcr.io/datamechanics/spark:platform-3.1-latest
+ARG IMAGE_VARIANT=slim-buster
+ARG OPENJDK_VERSION=8
+ARG PYTHON_VERSION=3.9.8
 
-ENV PYSPARK_MAJOR_PYTHON_VERSION=3
+FROM python:${PYTHON_VERSION}-${IMAGE_VARIANT} AS py3
+FROM openjdk:${OPENJDK_VERSION}-${IMAGE_VARIANT}
 
-#Install Python & pip
-RUN pip3 install pytest 
-# Install dependencies via pip
-# WORKDIR /usr/src/app
+COPY --from=py3 / /
+
+ARG PYSPARK_VERSION=3.2.0
+RUN pip --no-cache-dir install pyspark==${PYSPARK_VERSION}
+RUN pip install pytest
+
+ENTRYPOINT ["python"]
