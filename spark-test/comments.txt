@@ -1,0 +1,11 @@
+Steps:
+- build the image: 
+    docker build . -t python-env
+- Run the container:
+    docker run -it --rm -v $(pwd)/python/library:/python/library python-env /bin/bash
+- Navigate to the /library/python directory
+- Install the python package
+    pip install .
+- run pytest, it should pass, which means a spark df has been created and the environment works
+    pytest
+
