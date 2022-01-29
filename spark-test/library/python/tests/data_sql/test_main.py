@@ -1,6 +1,8 @@
 import pandas as pd
 from pyspark.sql import SparkSession
 
+from src.lib.dc_azure_toolkit import sql
+
 def test_dfs_count():
     # Assumes that pyspark is installed on the machine!
     # Suggestion: use databricks connect to use the databricks cluster
@@ -29,11 +31,10 @@ def test_dfs_count2():
 
     data = rdd.toDF(columns)   
 
-
     assert data.count() != 1
     spark.stop()
 
-def test_dfs_count2():
+def test_dfs_count3():
     # Assumes that pyspark is installed on the machine!
     # Suggestion: use databricks connect to use the databricks cluster
     # https://docs.databricks.com/dev-tools/databricks-connect.html
@@ -49,4 +50,5 @@ def test_dfs_count2():
 
     assert data.count() == 2
     spark.stop()
+
 

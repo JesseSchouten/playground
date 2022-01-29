@@ -7,4 +7,6 @@ WORKDIR /library/python
 
 RUN pip install .
 
-ENTRYPOINT ["pytest"]
+WORKDIR /
+
+RUN rm -r library
