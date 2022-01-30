@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  pyspark:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: 3.7.10 
+        IMAGE: buster
+    image: spark-test_pyspark
+    volumes: 
+      - .:/folder
+    working_dir: /folder/library/python
+    entrypoint: pytest
