@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   make_release:
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
@@ -56,26 +57,3 @@ jobs:
           base: main
           title: Release ${{ needs.make_release.outputs.version }}
           body: Automated PR for release ${{ needs.make_release.outputs.version }}
-
-
-  set_release_tag:
-    runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'chore(release)')"
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setting git config
-        run: |
-          git config --global user.email "services@dutchchannels.com"
-          git config --global user.name "DutchChannels"
-
-      - id: get_version
-        run: 'echo "::set-output name=version::$(cat VERSION.md)"'
-
-      - name: Setting git tag and push
-        run: |
-          git tag @jesseschouten/playground@${{ steps.get_version.outputs.version }}
-          git push origin @jesseschouten/playground@${{ steps.get_version.outputs.version }}
