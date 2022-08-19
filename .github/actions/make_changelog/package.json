@@ -1,0 +1,25 @@
+{
+  "name": "@dutchchannels/cicd-make-changelog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "standard-version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:JesseSchouten/playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesseSchouten/playground/issues"
+  },
+  "homepage": "https://github.com/JesseSchouten/playground#readme",
+  "dependencies": {
+    "glob": "^7.2.0",
+    "standard-version": "^9.3.2",
+    "yamljs": "^0.3.0"
+  }
+}
