@@ -10,5 +10,3 @@ RUN pip install .
 WORKDIR /
 
 RUN rm -r library
-
-
