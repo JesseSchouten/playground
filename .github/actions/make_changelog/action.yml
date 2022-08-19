@@ -1,0 +1,11 @@
+name: make_changelog
+outputs:
+  version:
+    description: 'The version released'
+    value: ${{ steps.get_version.outputs.version }}
+runs:
+  using: "composite"
+  steps:
+    - id: get_version
+      run: "echo \"::set-output name=version::$(cat VERSION.md)\""
+      shell: bash
