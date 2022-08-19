@@ -1,8 +1,8 @@
 name: main
 on:
-  push:
+  delete:
     branches:
-      - main
+      - release
 
 jobs:
   set_release_tag:
