@@ -5,6 +5,7 @@ on:
       - main
     paths-ignore:
       - CHANGELOG.md
+      - VERSION.md
 
 jobs:
   make_release:
