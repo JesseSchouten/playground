@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.54.0](https://github.com/JesseSchouten/playground/compare/@jesseschouten/playground@2.53.2...@jesseschouten/playground@2.54.0) (2022-08-22)
+
+
+### Features
+
+* add env to gh ([09abeec](https://github.com/JesseSchouten/playground/commit/09abeec491e902ab87c68e69ada758e949c40d89))
+* add env to gh ([5381939](https://github.com/JesseSchouten/playground/commit/53819398085d0aeb43b2cd1c77bf17aa275705f2))
+* add env to gh ([9fc7c11](https://github.com/JesseSchouten/playground/commit/9fc7c110454080b85a12889a49ec6e0f5d46c558))
+* add env to gh ([0a4e3d4](https://github.com/JesseSchouten/playground/commit/0a4e3d41c2acd967fe28a1c0a53b728435c1f8a9))
+* add env to gh ([60ff31f](https://github.com/JesseSchouten/playground/commit/60ff31f5c5e69c9552887c35d7466cf79e56c4ee))
+* add env to gh ([d033327](https://github.com/JesseSchouten/playground/commit/d033327f0fa594e6f391ffea0d36ba307f05dfc2))
+* add env to gh ([86e50fc](https://github.com/JesseSchouten/playground/commit/86e50fcade8541681074edbe3be509d202beb765))
+* add env to gh ([996aacb](https://github.com/JesseSchouten/playground/commit/996aacb2498a7bb3369791029eb0538e7dabe72a))
+* add env to gh ([a2527e5](https://github.com/JesseSchouten/playground/commit/a2527e52accc3f29be15441e72596ec32cb0a22f))
+* last version ([9191832](https://github.com/JesseSchouten/playground/commit/91918327791fd2c8b3dac243e31cccbcaa5458fd))
+* random feature that will not show up in changelog directly ([df1f92a](https://github.com/JesseSchouten/playground/commit/df1f92a1fa24f7aeefbc9b68871fc5c619a07e81))
+* test feat ([5611ce7](https://github.com/JesseSchouten/playground/commit/5611ce76ca9263abbfdd3290741c16578a411762))
+
+
+### Bug Fixes
+
+* test fix ([c7b4283](https://github.com/JesseSchouten/playground/commit/c7b428394a6ca2c7aed8b38f06f6b0ce31727749))
+
 ### [2.53.2](https://github.com/JesseSchouten/playground/compare/@jesseschouten/playground@2.53.1...@jesseschouten/playground@2.53.2) (2022-08-22)
 
 ### [2.53.1](https://github.com/JesseSchouten/playground/compare/@jesseschouten/playground@2.53.0...@jesseschouten/playground@2.53.1) (2022-08-22)
