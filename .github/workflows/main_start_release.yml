@@ -52,6 +52,9 @@ jobs:
       contents: read
       pull-requests: write
     steps:
+      - name: close open release pr
+        run: |
+          gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
       - name: Create pull request
         uses: thomaseizinger/create-pull-request@master
         with:
