@@ -10,7 +10,6 @@ on:
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
 jobs:
   make_release:
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
@@ -62,7 +61,6 @@ jobs:
           fetch-depth: 0
       - name: close open release pr
         run: |
-          ls
           gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
       - name: Create pull request
         uses: thomaseizinger/create-pull-request@master
