@@ -16,8 +16,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     runs-on: ubuntu-latest
     permissions:
-      contents: read|write
-      pull-requests: write
+      contents: write
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
@@ -49,10 +48,6 @@ jobs:
       - name: Pushing release branch
         run: |
           git push -u origin release --follow-tags
-          
-      - name: close open release pr
-        run: |
-          gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
 
   make_pr:
     runs-on: ubuntu-latest
@@ -61,6 +56,9 @@ jobs:
       contents: read
       pull-requests: write
     steps:
+      - name: close open release pr
+        run: |
+          gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
       - name: Create pull request
         uses: thomaseizinger/create-pull-request@master
         with:
