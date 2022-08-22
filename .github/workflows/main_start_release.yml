@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - !CHANGELOG.md
+    paths-ignore:
+      - CHANGELOG.md
 
 jobs:
   make_release:
