@@ -48,6 +48,10 @@ jobs:
       - name: Pushing release branch
         run: |
           git push -u origin release --follow-tags
+          
+      - name: close open release pr
+        run: |
+          gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
 
   make_pr:
     runs-on: ubuntu-latest
@@ -56,9 +60,6 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: close open release pr
-        run: |
-          gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
       - name: Create pull request
         uses: thomaseizinger/create-pull-request@master
         with:
