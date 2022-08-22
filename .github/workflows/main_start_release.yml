@@ -56,6 +56,10 @@ jobs:
       contents: read
       pull-requests: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: close open release pr
         run: |
           ls
