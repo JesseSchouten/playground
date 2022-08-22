@@ -2,6 +2,8 @@ import sys
 
 from pyspark.sql import SparkSession
 
+
+
 def select(query, authentication_dict, db, container_name, output_format = 'df', spark = None):
   """
   Authenticates with a given CosmosDB container, and retrieves data from the given query: https://docs.microsoft.com/en-us/azure/cosmos-db/sql/create-sql-api-spark.

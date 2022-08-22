@@ -53,8 +53,10 @@ jobs:
       pull-requests: write
     steps:
       - name: close open release pr
-        run: |
+        - run: |
           gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create pull request
         uses: thomaseizinger/create-pull-request@master
         with:
