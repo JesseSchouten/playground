@@ -1,11 +1,8 @@
 name: sql_ci
 on:
   push:
-    paths:
-      - "sql-server/**"
-  pull_request:
     branches:
-      - develop
+      - main
 jobs:
   # The testing of the SQL is done by trying to build the artifact using the (default) Debug configuration
   make_debug_sql_artifact:
