@@ -2,6 +2,8 @@ import sys
 
 from pyspark.sql import SparkSession
 
+
+
 def select(query, authentication_dict, cluster = 'uelprdadx', kustoDatabase = 'uel', df_format = 'dfs', spark = None):
     """
     Authenticates with a given Azure Data Explorer (ADX) cluster, and retrieves data from the given kusto query.
