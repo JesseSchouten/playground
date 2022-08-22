@@ -1,0 +1,36 @@
+name: sql_ci
+on:
+  push:
+    paths:
+      - "sql-server/**"
+  pull_request:
+    branches:
+      - develop
+jobs:
+  # The testing of the SQL is done by trying to build the artifact using the (default) Debug configuration
+  make_debug_sql_artifact:
+    runs-on: windows-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.2
+
+      - name: Build artifacts
+        working-directory: ./sql-server
+        run: msbuild dc.sln
+
+      - name: Collect artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: DC-SQL-Debug-Schema
+          path: sql-server/dc/bin/Debug
+          retention-days: 5
+      - name: Deploy artifact to SQL server
+        uses: azure/sql-action@v1.3
+        with:
+          connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+          dacpac-package: './sql-server/dc/bin/Debug/dc.dacpac'
+          arguments: '/p:DropObjectsNotInSource=true'   # Optional parameters for SqlPackage Publish

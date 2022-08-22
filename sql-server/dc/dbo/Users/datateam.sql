@@ -1,0 +1,14 @@
+﻿CREATE USER [Data team] FROM EXTERNAL PROVIDER
+	WITH DEFAULT_SCHEMA = dbo
+
+GO
+
+GRANT CONNECT TO [Data team]
+
+GO
+
+ALTER ROLE db_owner ADD MEMBER [Data team]
+
+GO
+
+GRANT CREATE PROCEDURE TO [Data team];

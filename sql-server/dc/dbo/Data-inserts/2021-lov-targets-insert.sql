@@ -1,0 +1,31 @@
+﻿INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-07-01', 'lov', 'NL', 2250   ,   20850	)
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-07-01', 'lov', 'BE', 150    ,   1450	)
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-07-01', 'lov', 'NO', 750    ,   2100	)
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-07-01', 'lov', 'SE', 1350   ,   3825	)
+    
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-08-01', 'lov', 'NL', 2250   ,   20710  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-08-01', 'lov', 'BE', 250    ,   1459   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-08-01', 'lov', 'NO', 1250   ,   2967   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-08-01', 'lov', 'SE', 2750   ,   5223   )        
+    
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-09-01', 'lov', 'NL', 2600   ,   22086  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-09-01', 'lov', 'BE', 400    ,   1834   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-09-01', 'lov', 'NO', 2000   ,   5482   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-09-01', 'lov', 'SE', 3000   ,   9095   )         
+    
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-10-01', 'lov', 'NL', 5450   ,   22789  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-10-01', 'lov', 'BE', 650    ,   1895   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-10-01', 'lov', 'NO', 3000   ,   5291   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-10-01', 'lov', 'SE', 3500   ,   8610   )         
+    
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-11-01', 'lov', 'NL', 5500   ,   26076  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-11-01', 'lov', 'BE', 1000   ,   2434   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-11-01', 'lov', 'NO', 3000   ,   6437   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-11-01', 'lov', 'SE', 4850   ,   9318   )         
+    
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-12-01', 'lov', 'NL', 7000   ,   28140  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-12-01', 'lov', 'BE', 1500   ,   3054   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-12-01', 'lov', 'NO', 4000   ,   7026   )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-12-01', 'lov', 'SE', 5000   ,   10201  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-12-01', 'lov', 'SE', 5000   ,   10201  )
+    INSERT INTO month_targets (month, channel, country, nr_trials, nr_paid_Customers) VALUES ('2021-12-01', 'lov', 'SE', 5000   ,   10201  )
