@@ -2,6 +2,8 @@ import sys
 
 from pyspark.sql import SparkSession
 
+
+
 def select_from_csv(storage_account_name, container_name, authentication_dict, file_path, delimiter =',', output_format='dfs', spark=None):
     """
     Gets data from a CSV file in a blob container on a storage account.
