@@ -16,7 +16,8 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read, write
+      pull-requests: write
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
