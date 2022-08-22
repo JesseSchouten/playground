@@ -1,7 +1,5 @@
 import sys
 
-
-
 from pyspark.sql import SparkSession
 
 def select(query, authentication_dict, cluster = 'uelprdadx', kustoDatabase = 'uel', df_format = 'dfs', spark = None):
