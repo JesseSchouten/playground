@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      
 jobs:
   # The testing of the SQL is done by trying to build the artifact using the (default) Debug configuration
   make_debug_sql_artifact:
