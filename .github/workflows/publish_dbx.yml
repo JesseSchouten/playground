@@ -2,7 +2,7 @@ name: Publish dbx workflows
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature/workflow-dbx" ]
 
 permissions:
   contents: read
