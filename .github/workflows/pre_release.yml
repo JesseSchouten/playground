@@ -62,4 +62,12 @@ jobs:
       - name: Close open release pr
         run: |
           gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
+      - name: Create pull request
+        uses: thomaseizinger/create-pull-request@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          head: refs/heads/release
+          base: main
+          title: Release ${{ needs.make_release.outputs.version }}
+          body: Automated PR for release ${{ needs.make_release.outputs.version }}
 
