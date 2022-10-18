@@ -26,9 +26,9 @@ jobs:
           git config --global user.name "DutchChannels"
 
       - id: get_version
-        run: 'echo "::set-output name=version::$(cat VERSION.md)"'
+        run: echo "{version_file_content}=version::$(cat VERSION.md)"" >> $GITHUB_ENV 
 
       - name: Setting git tag and push
         run: |
-          git tag @dutchchannels/peitho@${{ steps.get_version.outputs.version }}
-          git push origin @dutchchannels/peitho@${{ steps.get_version.outputs.version }}
+          git tag @dutchchannels/peitho@${{ env.version_file_content }}
+          git push origin @dutchchannels/peitho@${{ env.version_file_content }}
