@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:JesseSchouten/playground.git"
+    "url": "git+ssh://git@github.com:DutchChannels/peitho.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JesseSchouten/playground/issues"
+    "url": "https://github.com/DutchChannels/peitho/issues"
   },
-  "homepage": "https://github.com/JesseSchouten/playground#readme",
+  "homepage": "https://github.com/DutchChannels/peitho/issues#readme",
   "dependencies": {
     "glob": "^7.2.0",
     "standard-version": "^9.3.2",
