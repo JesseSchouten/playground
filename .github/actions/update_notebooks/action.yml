@@ -1,0 +1,35 @@
+name: update_notebooks
+description: pull latest changes from a git branch in a databricks repo
+
+inputs:
+  databricks-host:
+    description: "Databricks workspace url"
+    required: true
+  databricks-token:
+    description: "Databricks access token"
+    required: true
+  path:
+    description: "Repo path to update"
+    default: "/Repos/dev-notebooks/peitho"
+    required: true
+  branch:
+    description: "Git branch to pull"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.8"
+
+    - name: Install databricks cli
+      uses: microsoft/install-databricks-cli@v1.0.0
+
+    - name: Update databricks repo
+      shell: bash
+      run: databricks repos update --path ${{ inputs.path }} --branch ${{ inputs.branch }}
+      env:
+        DATABRICKS_HOST: ${{ inputs.databricks-host }}
+        DATABRICKS_TOKEN: ${{ inputs.databricks-token }}

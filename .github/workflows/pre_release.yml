@@ -1,4 +1,4 @@
-name: main
+name: pre_release
 on:
   push:
     branches:
@@ -20,14 +20,14 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setting git config
         run: |
-          git config --global user.email "services@dutchchannels.com"
-          git config --global user.name "DutchChannels"
+          git config --global user.email "jesse.schouten@outlook.com"
+          git config --global user.name "JesseSchouten"
 
       - name: Clean up old release branches
         run: |
@@ -56,10 +56,10 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: close open release pr
+      - name: Close open release pr
         run: |
           gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
       - name: Create pull request
@@ -70,3 +70,4 @@ jobs:
           base: main
           title: Release ${{ needs.make_release.outputs.version }}
           body: Automated PR for release ${{ needs.make_release.outputs.version }}
+
