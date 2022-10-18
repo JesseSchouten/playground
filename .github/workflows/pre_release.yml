@@ -20,7 +20,7 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
@@ -62,12 +62,4 @@ jobs:
       - name: Close open release pr
         run: |
           gh pr list | grep "Release" | awk -F ' ' '{print $1}' | xargs -r gh pr close
-      - name: Create pull request
-        uses: thomaseizinger/create-pull-request@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          head: refs/heads/release
-          base: main
-          title: Release ${{ needs.make_release.outputs.version }}
-          body: Automated PR for release ${{ needs.make_release.outputs.version }}
 
